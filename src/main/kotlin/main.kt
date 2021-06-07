@@ -1,5 +1,6 @@
-fun main(args: Array<String>) {
+import kotlin.random.Random
 
+fun main(args: Array<String>) {
     /*
     *Tabla del 7
      */
@@ -11,9 +12,20 @@ fun main(args: Array<String>) {
     *Array numeros aleatorios
      */
 
-    Ejer2(10).arrayRan.forEach{
-        println("Numero= ${it}")
+    val nAleaorios = Ejer2(10){
+        Random.nextInt(50,250)
     }
+    nAleaorios.aleatorios.forEach {
+        println("Numero= $it")
+
+    }
+
+
+    /*
+    *Numeros impares
+     */
+
+    Ejer3().miembro(nAleaorios.aleatorios)
 
 
 }
